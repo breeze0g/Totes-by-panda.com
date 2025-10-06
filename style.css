@@ -1039,7 +1039,160 @@ padding: 50px;
             position: relative;
             left: 520px;
         }
-   
 
-  
+        /* 📱 Mobile and small laptop scaling */
+        @media screen and (max-width: 992px) {
+            body {
+                overflow-x: hidden;
+                font-size: 90%;
+            }
+    
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                gap: 0.5rem;
+            }
+    
+            .nav a {
+                font-size: 0.9rem;
+                margin: 0.3rem;
+            }
+    
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-size: clamp(1.2rem, 4vw, 2.2rem);
+                text-align: center;
+            }
+    
+            p {
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+                line-height: 1.5;
+                text-align: center;
+            }
+    
+            /* Images */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            /* Flex containers should wrap */
+            .opp,
+            .into,
+            .services {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+    
+            /* Sections padding */
+            section,
+            .about,
+            .town,
+            .tpin,
+            .special,
+            .never {
+                padding: 1rem;
+                margin: 1rem auto;
+                text-align: center;
+            }
+    
+            /* Prevent overlapping elements */
+            [class*="sa"],
+            [class*="se"],
+            .spin,
+            .rep,
+            .past,
+            .ten {
+                position: static !important;
+            }
+    
+            /* Adjust video background */
+            #bg-video {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+                /* ✅ UNIVERSAL RESPONSIVE FIXER — keeps design intact */
+                @media screen and (max-width: 992px) {
+        
+                    html,
+                    body {
+                        overflow-x: hidden !important;
+                    }
+        
+                    /* 🌍 Make layout stack vertically instead of side-by-side */
+                    .about,
+                    .opp,
+                    .into,
+                    .services,
+                    .town,
+                    .special,
+                    .never {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        gap: 1rem;
+                        padding: 1rem;
+                    }
+        
+                    /* 🖼 Make all images responsive */
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+        
+                    /* 🧭 Make text readable and scale smoothly */
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    p {
+                        max-width: 100%;
+                        line-height: 1.5;
+                        text-align: center;
+                    }
+        
+                    /* 🧭 Navbar responsive (stack links vertically) */
+                    .nav {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 0.5rem;
+                        padding: 1rem;
+                    }
+        
+                    .nav a {
+                        display: block;
+                        font-size: 1rem;
+                    }
+        
+                    /* 🎥 Video background responsiveness */
+                    .video-wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                    }
+        
+                    #bg-video {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+        
+                    /* 🧱 Remove hard positioning only on small screens (so elements flow naturally) */
+                    [style*="position"],
+                    [class*="sa"],
+                    [class*="se"] {
+                        position: static !important;
+                    }
+                }
+
             

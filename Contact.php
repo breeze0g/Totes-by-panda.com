@@ -13,7 +13,7 @@
       <a href="Shop.html" class="bab">Shop</a>
       <a href="Offers.html" class="bab">Offers</a>
       <a href="Totes.html" class="bab">Totes</a>
-      <a href="Contact.php"class="bab">Contact</a>
+      <a href="Contact.html"class="bab">Contact</a>
 
       <link rel="stylesheet" href="style.css">
     </nav>
@@ -147,4 +147,5 @@ mysqli_close($connect);
   </footer>
  </div> 
 </body>
+
 </html>

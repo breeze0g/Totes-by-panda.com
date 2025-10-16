@@ -19,7 +19,8 @@ body {
 
 /* ==== HERO SECTION ==== */
 .hero {
-    position: relative;
+    position: static;
+    top: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -41,25 +42,40 @@ body {
 
 #bg-video {
     width: 100%;
-    height: 100%;
+    height: 70%;
     object-fit: cover;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    bottom: 150px;
     color: white;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+
 }
 
 .hero h1 {
     font-size: 6rem;
     margin-bottom: 10px;
+    color: #ff1493;
+        font-style: italic;
+        text-align: center;
+        margin: 1rem 0;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease, transform 0.3s ease;
+        font-weight: 300;
+        font-family:cursive;
+
 }
 
 .pass {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
+    font-style: italic;
+    color: #000;
+    position: relative;
+    top: 20px;
 }
 
 /* ==== NAVIGATION ==== */
@@ -68,24 +84,26 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    background: rgba(0, 0, 0, 0.5);
     padding: 15px 25px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 99;
+    
+    
 }
 
 .nav .bab {
-    color: white;
+    color: #ff1493;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    font-family:monospace;
+    font-size: 20px;
 }
 
 .nav .bab:hover {
-    color: #ff69b4;
+    text-decoration: underline;
 }
 
 /* ==== ABOUT SECTION ==== */
@@ -120,19 +138,39 @@ body {
     background: #ffe4ec;
     margin: 20px 0;
     position: relative;
-    bottom: 20px;
+    bottom: 350px;
 }
 
-.did,
-.dod,
-.discount {
-    display: inline-block;
+.did{
+    
     animation: scrollText 18s linear infinite;
     font-weight: 500;
-    padding: 15px;
+    padding: 30px;
     position: relative;
     
 }
+
+    .discount{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px 0;
+    position: relative;
+    animation: scroll 18s linear infinite;
+    font-weight: 500;
+    padding: 15px;
+    }
+    
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 
 @keyframes scrollText {
     0% {
@@ -151,11 +189,16 @@ body {
     animation-play-state: paused;
 }
 
+
+
 .welcome {
     text-align: center;
-    color: #ff69b4;
+    color: black;
     margin: 40px 0 10px;
-    font-size: 2rem;
+    font-size: 4rem;
+    background-color: #ffb6c1;
+    font-weight: 300;
+    font-family: cursive;
 }
 
 /* ==== WHY CHOOSE SECTION ==== */
@@ -167,11 +210,13 @@ body {
 .why {
     color: #ff69b4;
     margin-bottom: 20px;
+    font-size: 30px;
 }
 
 .past {
     max-width: 800px;
     margin: 0 auto;
+    font-size: 20px;
 }
 
 /* ==== SAMPLES ==== */
@@ -183,6 +228,7 @@ body {
 .ten {
     color: #ff69b4;
     margin-bottom: 20px;
+    font-size: 60px;
 }
 
 .opp {
@@ -206,15 +252,12 @@ body {
 /* ==== OFFERS SECTION ==== */
 .board {
     text-align: center;
-    color: #ff69b4;
+    color: black;
     margin: 40px 0 10px;
+    font-size: 50px;
+    background-color: #F9C6D4;
 }
 
-.discount {
-    font-size: 1rem;
-    background: #fff0f6;
-    padding: 10px 0;
-}
 
 .cover img {
     width: 100%;
@@ -230,11 +273,15 @@ body {
 .moreon {
     color: #ff69b4;
     margin-bottom: 10px;
+    font-size: 60px;
+    position: relative;
+    bottom: 0.3em;
 }
 
 .moreoff {
     max-width: 800px;
     margin: 0 auto;
+    font-size: 20px;
 }
 
 /* ==== INSTAGRAM ==== */
@@ -247,6 +294,7 @@ body {
     color: #ff69b4;
     margin-bottom: 10px;
     font-size: 60px;
+font-family: cursive;
 }
 
 .inst img {
@@ -294,21 +342,21 @@ body {
 .services {
     display: flex;
     flex-wrap: wrap;
-    /* allows wrapping on smaller screens */
+    
     justify-content: center;
-    /* centers items horizontally */
+   
     align-items: flex-start;
-    /* keeps top alignment */
+   
     gap: 2em;
-    /* space between each service box */
+    
     text-align: left;
-    /* keeps text readable */
+
     padding: 1em;
 }
 
 .services .se {
     max-width: 300px;
-    /* controls width per service box */
+   
 }
 
 .services h3,
@@ -647,8 +695,6 @@ body {
 }
 
 
-/* baghtml */
-
 .aaa {
 
     overflow: hidden;
@@ -730,18 +776,7 @@ body {
     transform: scale(1.1)
 }
 
-.sis{
-      
-      color: #ff1493;
-        font-style: italic;
-        text-align: center;
-        margin: 1rem 0;
-        position: relative;
-        z-index: 1;
-        transition: color 0.3s ease, transform 0.3s ease;
-        font-weight: 300;
 
-}
 
 .sis:hover {
     transition: color 0.3s ease, transform 0.3s ease;
@@ -753,10 +788,34 @@ body {
 
     text-align: center;
     color: #ff1493;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 200;
+   font-family:cursive;
 
 }
 
+.sips{
+
+    position: relative;
+    bottom: 180px;
+    background-color: #ffe4ec;
+    padding: 80px;
+
+}
+
+.sis{
+    font-size: 6rem;
+    margin-bottom: 10px;
+    color: #ff1493;
+        font-style: italic;
+        text-align: center;
+        margin: 1rem 0;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease, transform 0.3s ease;
+        font-weight: 300;
+        font-family:cursive;
+}
             
+
 
